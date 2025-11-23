@@ -4,11 +4,14 @@ const withPWA = require("next-pwa")({
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === "development",
+  // 👇 Ye line add ki hai taaki build crash na ho (WorkerError fix)
+  buildExcludes: [/middleware-manifest.json$/],
 });
 
 /** @type {import('next').NextConfig} */
-// 👇 Yahan humne ': any' laga diya hai taaki red line hat jaye
 const nextConfig: any = {
+  reactStrictMode: true,
+  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
