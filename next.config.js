@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // इन दोनों को true रखने से build कभी फेल नहीं होगा
+  // एरर इग्नोर करें ताकि साइट लाइव हो सके
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Vercel पर इमेज लोड होने की समस्या ठीक करने के लिए
+  // Vercel पर इमेज लोड होने की स्पीड बढ़ाएं
   images: {
     unoptimized: true,
   },
