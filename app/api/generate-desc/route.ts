@@ -15,23 +15,7 @@ const apiKey = process.env.GROQ_API_KEY;
       method: "POST",
       headers: {
         "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json",# 1. नया Git शुरू करें
-git init
-
-# 2. फाइल्स जोड़ें
-git add .
-
-# 3. कमिट करें (अब इसमें कोई पुरानी Key नहीं होगी)
-git commit -m "Clean Code Final"
-
-# 4. ब्रांच सेट करें
-git branch -M main
-
-# 5. अपना GitHub लिंक जोड़ें
-git remote add origin https://github.com/pinak9999/room-finder-app.git
-
-# 6. फोर्स पुश करें
-git push -u -f origin main
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         messages: [
